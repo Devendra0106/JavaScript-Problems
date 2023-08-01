@@ -20,5 +20,7 @@ function three(){
   console.log(a+b+c+d); // Error: b is not defined, cz not in lexical scope of three()
 }
 
+//"use strict" --> If added at top of code, need to declare vars before using, else will give errors.
+
 first();
 
