@@ -40,3 +40,11 @@ arr2.push(100);
 
 console.log(arr1); //[1, 4, 5, 6, 100]
 console.log(arr2); //[1, 4, 5, 6, 100]
+
+// 3.
+let arr1 = [1,4,5,6];
+let arr2 = [].concat(arr1);
+arr2.push(100);
+
+console.log(arr1);   //[1, 4, 5, 6]
+console.log(arr2);   //[1, 4, 5, 6, 100]
