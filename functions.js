@@ -22,3 +22,15 @@ function a(){
 }
 const c = a();
 c();
+
+// Callback Functions: Any function that is passed as an argument to another function.
+function a(name, cb){
+  console.log(`Hello ${name} From A`);
+  cb();
+}
+function b(){
+  console.log('From B');
+}
+a('Dev', b);
+
+
