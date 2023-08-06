@@ -33,4 +33,9 @@ function b(){
 }
 a('Dev', b);
 
+//Anonymous Function: Function without any name
+document.addEventListener('click', function(){
+  console.log('Hi');
+})
+
 
