@@ -43,7 +43,7 @@ console.log(arr2); //[1, 4, 5, 6, 100]
 
 // 3.
 let arr01 = [1, 4, 5, 6];
-let arr02 = [].concat(arr1);
+let arr02 = [].concat(arr1); // Returns new array
 arr2.push(100);
 
 console.log(arr01); //[1, 4, 5, 6]
