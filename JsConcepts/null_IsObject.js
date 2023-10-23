@@ -7,3 +7,6 @@ console.log(bar !== null && typeof bar === "object");
 
 // To check array
 console.log(Array.isArray(bar));
+
+// Return true only for objects not for array
+console.log(bar !== null && bar.constructor === Object);
