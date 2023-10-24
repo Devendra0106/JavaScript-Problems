@@ -2,8 +2,8 @@ var bar = null;
 
 console.log(typeof bar === "object");
 
-//null is also consideres as object, so use below check to validate object.
+// null is also consideres as object, so use below check to validate object.
 console.log(bar !== null && typeof bar === "object");
 
-//To check array
+// To check array
 console.log(Array.isArray(bar));
