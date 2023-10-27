@@ -18,10 +18,11 @@ const error = (err) => {
 };
 checkNumber(10).then(success).catch(error);
 
+//Promise chaining:
 // checkNumber(10)
 // 	.then((res) => {
 // 		console.log("res-->", res);
-// 		return checkNumber(20);
+// 		return checkNumber(20); // return is important here to chain the promise.
 // 	})
 // 	.then((res) => {
 // 		console.log("res-->", res);
