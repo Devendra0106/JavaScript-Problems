@@ -19,20 +19,19 @@
 const p1 = new Promise((resolve, reject) => {
 	setTimeout(() => {
 		resolve("Promise 1 Resolved value!");
-	}, 5000);
+	}, 10000);
 });
-0;
 
 const p2 = new Promise((resolve, reject) => {
 	setTimeout(() => {
 		resolve("Promise 2 Resolved value!");
-	}, 10000);
+	}, 20000);
 });
 
 const handlePromiseUsingAsyncAwait = async () => {
 	console.log("Start");
-	const res1 = await p1; //JS Engine will wait for promise tobe resolved.
-	console.log("res1", res1);
+	const res1 = await p1; //JS will suspend the execution of handlePromiseUsingAsyncAwait function.
+	console.log("res1", res1); //Js resumes the execution of handlePromiseUsingAsyncAwait function from next line.
 	const res2 = await p2;
 	console.log("res2", res2);
 	console.log("End");
