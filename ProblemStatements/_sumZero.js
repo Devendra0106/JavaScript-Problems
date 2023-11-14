@@ -11,19 +11,21 @@
 
 // O(n)
 function sumZero(arr) {
-    // array needs to be sorted.
-    let l=0, r=arr.length - 1;
-    while(l<r){
-        let sum = arr[l] + arr[r];
-        if(sum < 0){
-            l++;
-        }else if(sum > 0){
-            r--;
-        }else{
-            return [arr[l], arr[r]];
-        }
-    }
+	// array needs to be sorted.
+	let l = 0,
+		r = arr.length - 1;
+	while (l < r) {
+		let sum = arr[l] + arr[r];
+		if (sum < 0) {
+			l++;
+		} else if (sum > 0) {
+			r--;
+		} else {
+			return [arr[l], arr[r]];
+		}
+	}
 }
 
 let arr = [-5, -4, -3, -2, 0, 2, 5, 6, 8];
-sumZero(arr);
+let res = sumZero(arr);
+console.log("Res-->", res);
