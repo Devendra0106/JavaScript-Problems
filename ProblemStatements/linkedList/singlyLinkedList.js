@@ -1,4 +1,4 @@
-//Node
+//Node - Holds value and reference of next node
 class Node {
 	constructor(val) {
 		this.val = val; //piece of data - val
@@ -12,6 +12,7 @@ class SinglyLinkedList {
 		this.tail = null;
 		this.length = 0;
 	}
+	//adding node to end of linked list
 	push(val) {
 		var newNode = new Node(val);
 		if (!this.head) {
