@@ -25,6 +25,7 @@ class SinglyLinkedList {
 		this.length++;
 		return this;
 	}
+	//removing node from the end of linked list
 	pop() {
 		if (!this.head) return undefined;
 		let current = this.head;
