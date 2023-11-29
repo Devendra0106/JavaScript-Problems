@@ -71,6 +71,17 @@ class SinglyLinkedList {
 		this.length++;
 		return this;
 	}
+
+	get(index) {
+		if (index < 0 || index >= this.length) return null;
+		let counter = 0;
+		let current = this.head;
+		while (counter < index) {
+			current = current.next;
+			counter++;
+		}
+		return current;
+	}
 }
 
 let list = new SinglyLinkedList();
@@ -78,6 +89,7 @@ list.push("Hi");
 list.push("LL");
 list.push("welcome!");
 // console.log(list.pop());
-console.log(list.shift());
-list.unshift("Hey, ");
+// console.log(list.shift());
+// list.unshift("Hey, ");
+console.log(list.get(1));
 console.log(list);
