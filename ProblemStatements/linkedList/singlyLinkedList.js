@@ -72,6 +72,7 @@ class SinglyLinkedList {
 		return this;
 	}
 
+	//Retrieving a node by it's index position in the linked list
 	get(index) {
 		if (index < 0 || index >= this.length) return null;
 		let counter = 0;
@@ -83,6 +84,7 @@ class SinglyLinkedList {
 		return current;
 	}
 
+	//Changing value of a node by it's index position in the linked list
 	set(index, val) {
 		var foundNode = this.get(index);
 		if (foundNode) {
@@ -100,8 +102,7 @@ list.push("welcome!");
 // console.log(list.pop());
 // console.log(list.shift());
 // list.unshift("Hey, ");
-// console.log(list.get(1));
-// console.log(list);
 console.log(list.get(1));
 list.set(2, "Linked List");
 console.log(list.get(1));
+console.log(list);
