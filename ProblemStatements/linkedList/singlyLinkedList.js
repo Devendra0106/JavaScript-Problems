@@ -93,16 +93,30 @@ class SinglyLinkedList {
 		}
 		return false;
 	}
+
+	insert(index, val) {
+		if (index < 0 || index > this.length) return false;
+		if (index === this.length) return !!this.push(val);
+		if (index === 0) return !!this.unshift(val);
+		let newNode = new Node(val);
+		let prev = this.get(index - 1);
+		let temp = prev.next;
+		prev.next = newNode;
+		newNode.next = temp;
+		this.length++;
+		return true;
+	}
 }
 
 let list = new SinglyLinkedList();
 list.push("Hi");
 list.push("LL");
 list.push("welcome!");
-console.log(list.pop());
-console.log(list.shift());
-list.unshift("Hey, ");
-console.log(list.get(1));
-list.set(2, "Linked List");
-console.log(list.get(1));
+// console.log(list.pop());
+// console.log(list.shift());
+// list.unshift("Hey, ");
+// console.log(list.get(1));
+// list.set(2, "Linked List");
+// console.log(list.get(1));
+console.log(list.insert(0, "Dev"));
 console.log(list);
