@@ -94,6 +94,7 @@ class SinglyLinkedList {
 		return false;
 	}
 
+	//Adding a node to linked list at a specific position.
 	insert(index, val) {
 		if (index < 0 || index > this.length) return false;
 		if (index === this.length) return !!this.push(val);
@@ -107,6 +108,7 @@ class SinglyLinkedList {
 		return true;
 	}
 
+	//Removing a node from linked list at a specific position.
 	remove(index) {
 		if (index < 0 || index > this.length) return undefined;
 		if (index === this.length - 1) return this.pop();
