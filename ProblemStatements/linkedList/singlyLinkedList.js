@@ -119,6 +119,17 @@ class SinglyLinkedList {
 		this.length--;
 		return removed;
 	}
+
+	//Print all node values in linked list
+	print() {
+		let current = this.head;
+		let arr = [];
+		while (current) {
+			arr.push(current.val);
+			current = current.next;
+		}
+		console.log("Linked List-->", arr);
+	}
 }
 
 let list = new SinglyLinkedList();
@@ -134,3 +145,4 @@ list.push("welcome!");
 console.log(list.insert(0, "Dev"));
 console.log(list.remove(3));
 console.log(list);
+list.print();
