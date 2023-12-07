@@ -25,9 +25,22 @@ class Stack {
 		}
 		return ++this.size;
 	}
+
+	pop() {
+		if (!this.first) return null;
+		let temp = this.first;
+		if (this.first === this.last) {
+			this.last = null;
+		}
+		this.first = this.first.next;
+		this.size--;
+		return temp.val;
+	}
 }
 
 let stack = new Stack();
 stack.push(1);
 stack.push(2);
 stack.push(3);
+console.log(stack.pop()); //3
+console.log(stack.pop()); //2
