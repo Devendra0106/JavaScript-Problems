@@ -1,3 +1,5 @@
+//Stack implementation using linked list
+//Node: holding value & reference of next node
 class Node {
 	constructor(val) {
 		this.val = val;
@@ -13,6 +15,7 @@ class Stack {
 		this.size = 0; //Size of Stack
 	}
 
+	//Push a element/node on top of stack: LIFO
 	push(val) {
 		let newNode = new Node(val);
 		if (!this.first) {
@@ -26,6 +29,7 @@ class Stack {
 		return ++this.size;
 	}
 
+	//Pop out a element/node from top of stack: LIFO
 	pop() {
 		if (!this.first) return null;
 		let temp = this.first;
