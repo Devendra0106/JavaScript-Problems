@@ -8,6 +8,7 @@ function findOdd(arr) {
 		if (inputArray[0] % 2 !== 0) {
 			res.push(inputArray[0]);
 		}
+		//Pass arr excluding first element from it
 		helperRecursion(inputArray.slice(1));
 	}
 
