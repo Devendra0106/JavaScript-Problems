@@ -8,6 +8,7 @@ function checkAnagrams(str1, str2) {
 	}
 	console.log(count);
 	for (let c of str2) {
+		//Cant find letter or letter is zero, then it's not an anagram.
 		if (!count[c]) {
 			return false;
 		}
@@ -17,4 +18,6 @@ function checkAnagrams(str1, str2) {
 	return true;
 }
 
-checkAnagrams("ram", "sam");
+let res = checkAnagrams("anagram", "nagaram");
+
+console.log("Res-->", res);
