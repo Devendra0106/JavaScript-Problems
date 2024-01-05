@@ -1,19 +1,13 @@
 function searchNaiveString(long, short) {
 	let c = 0;
 	for (let i = 0; i < long.length; i++) {
-		let j = 0;
-		while (j < short.length) {
-			if (long[i + j] === short[j]) {
-				j++;
-			} else {
-				break;
-			}
+		for (let j = 0; j < short.length; j++) {
+			if (short[j] !== long[i + j]) break;
+			if (j === short.length - 1) c++;
 		}
-		console.log("i-->", long[i], "j-->", j);
-		if (j === short.length) c++;
 	}
 	return c;
 }
 
-let res = searchNaiveString("wowomgzomg", "omg");
+let res = searchNaiveString("wowomgxomg", "omg");
 console.log("Res-->", res);
