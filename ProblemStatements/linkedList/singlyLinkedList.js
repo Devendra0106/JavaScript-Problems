@@ -12,6 +12,7 @@ class SinglyLinkedList {
 		this.tail = null;
 		this.length = 0;
 	}
+
 	//adding node -to end of linked list
 	push(val) {
 		var newNode = new Node(val);
@@ -25,6 +26,7 @@ class SinglyLinkedList {
 		this.length++;
 		return this;
 	}
+
 	//removing node from the end of linked list
 	pop() {
 		if (!this.head) return undefined;
@@ -43,12 +45,23 @@ class SinglyLinkedList {
 		}
 		return current;
 	}
+
+	shift() {
+		if (!this.head) return undefined;
+		let currentHead = this.head;
+		this.head = currentHead.next;
+		this.length--;
+		if (this.length === 0) {
+			this.tail = null;
+		}
+		return currentHead;
+	}
 }
 
 let list = new SinglyLinkedList();
 list.push("Hi");
 list.push("LL");
 list.push("welcome!");
-list.push("ok!");
-list.pop();
 console.log(list.pop());
+console.log(list.shift());
+console.log(list);
