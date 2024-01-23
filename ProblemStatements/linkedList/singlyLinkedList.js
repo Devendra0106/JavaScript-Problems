@@ -131,6 +131,7 @@ class SinglyLinkedList {
 		console.log("Linked List-->", arr);
 	}
 
+	//Reverse linked list
 	reverse() {
 		let node = this.head;
 		this.head = this.tail;
