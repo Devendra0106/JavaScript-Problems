@@ -1,3 +1,5 @@
+//Queue implementation using linked list
+//Node: holding value & reference of next node
 class Node {
 	constructor(val) {
 		this.val = val;
@@ -5,13 +7,15 @@ class Node {
 	}
 }
 
+//Queue Data Structure
 class Queue {
 	constructor() {
-		this.first = null;
-		this.last = null;
-		this.size = 0;
+		this.first = null; //First element in queue
+		this.last = null; //Last element in queue
+		this.size = 0; //Size of queue
 	}
 
+	//Insert an element/node at end of queue
 	enqueue(val) {
 		let newNode = new Node(val);
 		if (!this.first) {
@@ -24,6 +28,7 @@ class Queue {
 		return ++this.size;
 	}
 
+	//Remove an element/node from start of queue
 	dequeue() {
 		if (!this.first) return null;
 		let temp = this.first;
