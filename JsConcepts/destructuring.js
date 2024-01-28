@@ -12,6 +12,21 @@ let obj = {
 let { add, fName } = obj;
 console.log(fName, add);
 
+//Nested Object destructuring
+let user = {
+	fullName: {
+		firstName: "ABC",
+		lastName: "XYZ",
+	},
+	age: 25,
+};
+
+let {
+	fullName: { firstName, lastName },
+	age,
+} = user;
+console.log(lastName, age);
+
 //Params destructing
 let emp = {
 	fName: "John",
