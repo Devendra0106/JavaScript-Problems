@@ -19,4 +19,4 @@ Promise.race([p1, p2, p3])
 	.catch((err) => {
 		console.log(err);
 	});
-//P2 fail after 2 secs --> P2 fail
+//P2 fail after 1 sec --> P2 fail
