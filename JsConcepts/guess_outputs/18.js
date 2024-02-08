@@ -13,9 +13,18 @@ let abc = {
 	},
 };
 
-let xyz = { ...abc };
-console.log(abc.address.street);
+//Shallow Copy
+let shallow = { ...abc };
+console.log(shallow.address.street);
 abc.address.street = "Aundh";
-xyz.address.more.b.k = "inner";
+shallow.address.more.b.k = "inner";
 console.log(abc.address.more.b.k);
-console.log(xyz.address.more.b.k);
+console.log(shallow.address.more.b.k);
+
+//Deep Copy
+let deep = JSON.parse(JSON.stringify(abc));
+console.log(deep.address.street);
+abc.address.street = "Aundh";
+deep.address.more.b.k = "again";
+console.log(abc.address.more.b.k);
+console.log(deep.address.more.b.k);
